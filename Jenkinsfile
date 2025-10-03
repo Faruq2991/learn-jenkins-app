@@ -12,6 +12,7 @@ pipeline {
             }
             steps {
                 sh '''
+                    npm config set cache $(pwd)/.npm-cache --global
                     ls -la
                     node --version
                     npm --version
